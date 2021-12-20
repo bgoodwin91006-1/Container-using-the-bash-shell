@@ -3,6 +3,9 @@ SECTION
 *********************
 Disclaimer
 *********************
+NOTE: This is not a safe environment for running malicious  code.
+It is primarily for added privacy on your system.
+
 Do not use these scripts or instructions if you are unfamiliar
 with the concepts of what is being done or the terms used to
 describe the required actions. I am not responsible for what you
