@@ -1,8 +1,7 @@
 #!/bin/bash
-if  [ -a home/$SUDO_USER/Rootfs/dev ] #minimal sanity check
+if  [ -a /home/$SUDO_USER/Rootfs/dev ] #minimal sanity check
     then
-    umount /home/$SUDO_USER/Rootfs/dev 
-    umount /home/$SUDO_USER/Rootfs/lib32 
+    umount /home/$SUDO_USER/Rootfs/dev  
     umount /home/$SUDO_USER/Rootfs/opt
     umount /home/$SUDO_USER/Rootfs/tmp 
     umount /home/$SUDO_USER/Rootfs/bin 
@@ -14,12 +13,16 @@ if  [ -a home/$SUDO_USER/Rootfs/dev ] #minimal sanity check
     umount /home/$SUDO_USER/Rootfs/usr 
     umount /home/$SUDO_USER/Rootfs/var
     umount /home/$SUDO_USER/Rootfs/etc
-else
+elif
     echo "home/$SUDO_USER/Rootfs does not appear to contain a filesystem."
+fi
+if [-a /home/$SUDO_USER/Rootfs/lib32 ]
+    then
+    umount /home/$SUDO_USER/Rootfs/lib32
 fi
 
 #example for any non-rootfs devices mounted to the container in the 'open' scriopt
-#if  [ -d home/$SUDO_USER/Rootfs/Elements ]
+#if  [ -d /home/$SUDO_USER/Rootfs/Elements ]
 #   then
 #   umount /home/$SUDO_USER/Rootfs/Elements 
 #fi
