@@ -13,7 +13,7 @@ if  [ -a /home/$SUDO_USER/Rootfs/dev ] #minimal sanity check
     umount /home/$SUDO_USER/Rootfs/usr 
     umount /home/$SUDO_USER/Rootfs/var
     umount /home/$SUDO_USER/Rootfs/etc
-elif
+else
     echo "home/$SUDO_USER/Rootfs does not appear to contain a filesystem."
 fi
 if [-a /home/$SUDO_USER/Rootfs/lib32 ]
